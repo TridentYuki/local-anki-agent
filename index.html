@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja"> <!-- en->ja -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 追加 -->
+    <title>Anki Agent</title> <!-- my-anki-agent -> Anki Agent -->
+    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Anki Agent(暗記カード)</h1>
+
+      <!-- カード追加フォーム -->
+      <section class="card-form">
+        <h2>新しいカードを追加</h2>
+        <input type="text" id="input-question" placeholder="問題文(例: FE: アセンブラ言語とは？)" />
+        <input type="text" id="input-answer" placeholder="解答文" />
+        <button id="btn-add">カードを保存(AI解説なし)</button>
+        <button id="btn-add-ai">AI解説つきで保存</button>
+      </section>
+
+      <!-- カード一覧表示エリア -->
+      <section class="card-list-section">
+        <h2>登録済みカード</h2>
+        <div id="card-list"></div>
+      </section>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
